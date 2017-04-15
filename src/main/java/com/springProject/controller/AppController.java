@@ -16,4 +16,10 @@ public class AppController {
         model.addAttribute("hello", message.getHello());
         return "hello";
      }
+
+    @RequestMapping("/confidential/hello")
+    public String message(Model model){
+        model.addAttribute("message", "How you receive access to this sercure page!?");
+        return "message";
+    }
 }
