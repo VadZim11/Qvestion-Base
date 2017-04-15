@@ -11,16 +11,9 @@ public class AppController {
     @Autowired
     Message message;
 
-
     @RequestMapping("/")
      public String hello(Model model) {
-        model.addAttribute("hello", "basic spring");
+        model.addAttribute("hello", message.getHello());
         return "hello";
      }
-
-    @RequestMapping("/hello")
-     public String next(Model model){
-        model.addAttribute("row",  message.getHello());
-        return "next";
-        }
 }
