@@ -7,5 +7,7 @@
 <body>
 <h1>Hello!</h1>
 <p>${hello}</p>
+<p>Конфликт</p>
+<p>not conflict</p>
 </body>
 </html>
