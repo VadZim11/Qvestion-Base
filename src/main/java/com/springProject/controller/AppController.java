@@ -1,7 +1,20 @@
 package com.springProject.controller;
 
-/**
- * Created by Admin on 15.04.2017.
- */
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
 public class AppController {
+    @RequestMapping("/")
+     public String hello(Model model) {
+        model.addAttribute("hello", "basic spring");
+        return "hello";
+     }
+
+    @RequestMapping("/hello")
+     public String next(Model model){
+        model.addAttribute("row", "row");
+        return "next";
+        }
 }
