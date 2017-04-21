@@ -1,5 +1,7 @@
 package com.springProject.config;
 
+import com.springProject.dao.OfferDAO;
+import com.springProject.dao.impl.OfferDAOImpl;
 import com.springProject.model.CreateTable;
 import com.springProject.model.Message;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,6 +48,11 @@ public class AppContext {
     @Bean
     public CreateTable createTable() {
         return new CreateTable(jdbcTemplate());
+    }
+
+    @Bean
+    public OfferDAO offerDAO(){
+        return new OfferDAOImpl();
     }
 
     @Bean
