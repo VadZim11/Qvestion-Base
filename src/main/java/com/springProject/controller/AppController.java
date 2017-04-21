@@ -1,5 +1,6 @@
 package com.springProject.controller;
 
+import com.springProject.dao.OfferDAO;
 import com.springProject.model.CreateTable;
 import com.springProject.model.Message;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,9 @@ public class AppController {
     @Autowired
     CreateTable createTable;
 
+    @Autowired
+    OfferDAO offerDAO;
+
     @RequestMapping("/")
     public String hello(Model model) {
        model.addAttribute("hello", message.getHello());
@@ -35,6 +39,12 @@ public class AppController {
     public String create(Model model){
         model.addAttribute("create", createTable.createTable());
         return "create";
+    }
+
+    @RequestMapping("/krokodil")
+    public String krokodil(Model model){
+        model.addAttribute("krokodil", offerDAO.insertData(2, "krokodil"));
+        return "krokodil";
     }
 
     @RequestMapping(value = {"hello/{name}"}, method = RequestMethod.GET)
