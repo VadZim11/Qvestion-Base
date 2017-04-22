@@ -1,5 +1,4 @@
-package com.springProject.config;
-
+package com.springProject.config.qvetionBase;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
