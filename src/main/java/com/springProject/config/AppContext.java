@@ -1,9 +1,11 @@
 package com.springProject.config;
 
+import com.springProject.config.qvetionBase.HibernateConfig;
 import com.springProject.dao.OfferDAO;
 import com.springProject.dao.impl.OfferDAOImpl;
 import com.springProject.model.CreateTable;
 import com.springProject.model.Message;
+import com.springProject.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -34,6 +36,11 @@ public class AppContext {
         JdbcTemplate jdbcTemplate = new JdbcTemplate();
         jdbcTemplate.setDataSource(dataSource());
         return jdbcTemplate;
+    }
+
+    @Bean
+    QuestionService questionService() {
+        return new QuestionService();
     }
 
     @Bean
