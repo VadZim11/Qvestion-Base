@@ -1,5 +1,7 @@
 package com.springProject.config.qvetionBase;
 
+import com.springProject.dao.QuestionDAO;
+import com.springProject.dao.impl.QuestionDAOImpl;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
