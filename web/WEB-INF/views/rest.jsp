@@ -103,7 +103,7 @@
                 <td>Get question by id</td>
                 <td><code><strong>GET</strong>/api/question/{id}</code></td>
                 <td>
-                    Id: <input id="id" value="3">
+                    Id: <input id="questionId" value="3">
                     <button type="button" onclick="RestGet($('#questionId').val())">Try</button>
                 </td>
             </tr>
@@ -139,7 +139,7 @@
                 <td>Delete question by id</td>
                 <td><code><strong>DELETE</strong> /api/question/{id}</code></td>
                 <td>
-                    Id: <input id="id" value="4">
+                    Id: <input id="deleteId" value="4">
                     <button type="button" onclick="RestDelete()">Try</button>
                 </td>
             </tr>
