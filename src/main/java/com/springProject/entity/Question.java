@@ -11,7 +11,6 @@ public class Question {
     @Column(name = "id")
     private int id;
 
-    @Transient
     private String question;
 
     private String answer;

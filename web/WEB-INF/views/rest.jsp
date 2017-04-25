@@ -94,25 +94,25 @@
             <tbody>
             <tr>
                 <td>Get all question</td>
-                <td><code><strong>GET</strong> /api/question/all</code></td>
+                <td><code><strong>GET</strong>/api/question/all</code></td>
                 <td>
                     <button type="button" onclick="RestGet('all')">Try</button>
                 </td>
             </tr>
             <tr>
                 <td>Get question by id</td>
-                <td><code><strong>GET</strong> /api/question/{id}</code></td>
+                <td><code><strong>GET</strong>/api/question/{id}</code></td>
                 <td>
-                    Id: <input id="questionID" value="3">
+                    Id: <input id="id" value="3">
                     <button type="button" onclick="RestGet($('#questionId').val())">Try</button>
                 </td>
             </tr>
             <tr>
                 <td>Add question</td>
-                <td><code><strong>POST</strong> /api/question</code></td>
+                <td><code><strong>POST</strong>/api/question</code></td>
                 <td>
                     <form class="form-inline">
-                        question: <input type="text" value="question" id="postQuestion">
+                        question: <input type="text" id="postQuestion" value="question">
                         answer: <input type="text" id="postAnswer" value="answer">
                         <button type="button" onclick="RestPost()">Try</button>
                     </form>
@@ -120,7 +120,7 @@
             </tr>
             <tr>
                 <td>Update question</td>
-                <td><code><strong>PUT</strong> /api/question</code></td>
+                <td><code><strong>PUT</strong>/api/question</code></td>
                 <td>
                     <form class="form-inline">
                         Id: <input type="text" value="3" id="putId">
@@ -139,7 +139,7 @@
                 <td>Delete question by id</td>
                 <td><code><strong>DELETE</strong> /api/question/{id}</code></td>
                 <td>
-                    Id: <input id="questionId" value="4">
+                    Id: <input id="id" value="4">
                     <button type="button" onclick="RestDelete()">Try</button>
                 </td>
             </tr>
