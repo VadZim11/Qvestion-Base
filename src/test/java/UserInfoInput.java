@@ -1,4 +1,4 @@
-/*import org.junit.Assert;
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -34,4 +34,4 @@ public class UserInfoInput {
         System.out.println("Name:" + nameInput.getText());
         System.out.println("Email::" + emailInput.getText());
     }
-}*/
+}
