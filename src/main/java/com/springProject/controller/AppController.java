@@ -3,6 +3,7 @@ package com.springProject.controller;
 import com.springProject.dao.OfferDAO;
 import com.springProject.model.CreateTable;
 import com.springProject.model.Message;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -14,6 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class AppController {
+    private static final Logger log = Logger.getLogger(AppController.class);
     @Autowired
     Message message;
 
@@ -26,6 +28,7 @@ public class AppController {
     @RequestMapping("/")
     public String hello(Model model) {
        model.addAttribute("hello", message.getHello());
+        log.info(message.getHello());
        return "hello";
     }
 
